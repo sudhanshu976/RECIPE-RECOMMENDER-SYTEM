@@ -30,9 +30,9 @@ def recommendation():
         recommended_recipe = recommend(selected_recipe)
 
         return render_template('index.html', recommended_recipe=recommended_recipe)
-#
-# if __name__ == '__main__':
-#     recipe = pickle.load(open('models/recipes.pkl', 'rb'))
-#     similarity = pickle.load(open('models/similarity.pkl', 'rb'))
-#
-#     app.run(debug=True)
+
+if __name__ == '__main__':
+    recipe = pickle.load(open('models/recipes.pkl', 'rb'))
+    similarity = pickle.load(open('models/similarity.pkl', 'rb'))
+
+    app.run(debug=True)
